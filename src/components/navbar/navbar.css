@@ -27,6 +27,12 @@
 }
 .icons{
     font-size: 20px;
+    
+}
+.icons.DARK{
+   
+    cursor: pointer;
+
 }
 .avatar{
     width: 30px;
