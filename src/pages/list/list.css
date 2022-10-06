@@ -1,0 +1,8 @@
+.sidelist{
+    display: flex;
+    width: 100%;
+
+}
+.sidelistContainer{
+    flex:6
+}

@@ -13,10 +13,13 @@ import {
   Routes,
   BrowserRouter,
 } from "react-router-dom";
+import { productInputs } from "./formSource";
+import { userInputs } from "./formSource";
+import "./style/dark.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark">
       <BrowserRouter>
         <Routes>
           <Route path="/">
@@ -25,13 +28,13 @@ function App() {
             <Route path="users">
               <Route index element={<List />}></Route>
               <Route path=":userId" element={<Single />}></Route>
-              <Route path="new" element={<New />}></Route>
+              <Route path="new" element={<New inputs={userInputs} title='Add new user'/>}></Route>
             </Route>
 
             <Route path="products">
               <Route index element={<List />}></Route>
               <Route path=":productId" element={<Single />}></Route>
-              <Route path="new" element={<New />} />
+              <Route path="new" element={<New inputs={productInputs} title='Add new Product'/>} />
             </Route>
           </Route>
         </Routes>
